@@ -1,0 +1,12 @@
+{
+  "Papyrbound.Radius": {
+    "corner": {
+      "none": { "$value": "0px", "$type": "borderRadius", "$description": "Square corners." },
+      "sm": { "$value": "4px", "$type": "borderRadius", "$description": "Tight controls and small chips." },
+      "md": { "$value": "8px", "$type": "borderRadius", "$description": "Inputs, compact cards, and cover frames." },
+      "lg": { "$value": "12px", "$type": "borderRadius", "$description": "Default Papyrbound panel radius." },
+      "xl": { "$value": "16px", "$type": "borderRadius", "$description": "Dialogs and prominent feature surfaces." },
+      "full": { "$value": "9999px", "$type": "borderRadius", "$description": "Pills, avatars, and circular controls." }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "Spacing": {
+    "space": {
+      "none": { "$value": "0px", "$type": "dimension", "$description": "No space." },
+      "2xs": { "$value": "4px", "$type": "dimension", "$description": "Micro space for dense controls and optical alignment." },
+      "xs": { "$value": "8px", "$type": "dimension", "$description": "Base spacing unit." },
+      "sm": { "$value": "12px", "$type": "dimension", "$description": "Compact component spacing." },
+      "md": { "$value": "16px", "$type": "dimension", "$description": "Default internal component spacing." },
+      "lg": { "$value": "24px", "$type": "dimension", "$description": "Comfortable component spacing." },
+      "xl": { "$value": "32px", "$type": "dimension", "$description": "Card and panel padding." },
+      "2xl": { "$value": "40px", "$type": "dimension", "$description": "Large section spacing." },
+      "3xl": { "$value": "48px", "$type": "dimension", "$description": "Large layout gap." },
+      "4xl": { "$value": "64px", "$type": "dimension", "$description": "Section separation." },
+      "5xl": { "$value": "80px", "$type": "dimension", "$description": "Page-level separation." },
+      "6xl": { "$value": "96px", "$type": "dimension", "$description": "Display-level separation." }
+    }
+  },
+  "Radius": {
+    "corner": {
+      "none": { "$value": "0px", "$type": "borderRadius", "$description": "Square corners." },
+      "sm": { "$value": "4px", "$type": "borderRadius", "$description": "Tight controls and small chips." },
+      "md": { "$value": "8px", "$type": "borderRadius", "$description": "Inputs, compact cards, and cover frames." },
+      "lg": { "$value": "12px", "$type": "borderRadius", "$description": "Default Papyrbound panel radius." },
+      "xl": { "$value": "16px", "$type": "borderRadius", "$description": "Dialogs and prominent feature surfaces." },
+      "full": { "$value": "9999px", "$type": "borderRadius", "$description": "Pills, avatars, and circular controls." }
+    }
+  },
+  "Monochrome": {
+    "color": {
+      "0": { "$value": "#ffffff", "$type": "color", "$description": "Pure white." },
+      "50": { "$value": "#fafafa", "$type": "color", "$description": "Soft white canvas." },
+      "100": { "$value": "#f5f5f5", "$type": "color", "$description": "Light neutral surface." },
+      "200": { "$value": "#e5e5e5", "$type": "color", "$description": "Subtle borders and separators." },
+      "300": { "$value": "#d4d4d4", "$type": "color", "$description": "Muted dividers and disabled surfaces." },
+      "400": { "$value": "#a3a3a3", "$type": "color", "$description": "Quiet metadata." },
+      "500": { "$value": "#737373", "$type": "color", "$description": "Secondary text." },
+      "600": { "$value": "#525252", "$type": "color", "$description": "Supporting text and icons." },
+      "700": { "$value": "#404040", "$type": "color", "$description": "Strong secondary text." },
+      "800": { "$value": "#262626", "$type": "color", "$description": "Primary dark surface." },
+      "900": { "$value": "#171717", "$type": "color", "$description": "Sidebar and primary text." },
+      "950": { "$value": "#0a0a0a", "$type": "color", "$description": "Deepest black." }
+    }
+  }
+}

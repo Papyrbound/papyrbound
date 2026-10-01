@@ -1,0 +1,18 @@
+{
+  "Papyrbound.Spacing": {
+    "space": {
+      "none": { "$value": "0px", "$type": "dimension", "$description": "No space." },
+      "2xs": { "$value": "4px", "$type": "dimension", "$description": "Micro space for dense controls and optical alignment." },
+      "xs": { "$value": "8px", "$type": "dimension", "$description": "Base spacing unit." },
+      "sm": { "$value": "12px", "$type": "dimension", "$description": "Compact component spacing." },
+      "md": { "$value": "16px", "$type": "dimension", "$description": "Default internal component spacing." },
+      "lg": { "$value": "24px", "$type": "dimension", "$description": "Comfortable component spacing." },
+      "xl": { "$value": "32px", "$type": "dimension", "$description": "Card and panel padding." },
+      "2xl": { "$value": "40px", "$type": "dimension", "$description": "Large section spacing." },
+      "3xl": { "$value": "48px", "$type": "dimension", "$description": "Large layout gap." },
+      "4xl": { "$value": "64px", "$type": "dimension", "$description": "Section separation." },
+      "5xl": { "$value": "80px", "$type": "dimension", "$description": "Page-level separation." },
+      "6xl": { "$value": "96px", "$type": "dimension", "$description": "Display-level separation." }
+    }
+  }
+}
