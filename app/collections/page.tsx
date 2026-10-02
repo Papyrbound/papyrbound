@@ -224,7 +224,7 @@ export default function CollectionsPage() {
   return (
     <main className="min-h-dvh bg-mono-100 px-7 pb-12 pt-16 text-mono-800 xl:px-8" aria-label="Collections">
       <div className="h-16" />
-      <header className="mb-10 flex items-end justify-between border-b border-[#d3c9b5] pb-3">
+      <header className="mb-10 flex items-end justify-between border-b border-mono-200 pb-3">
         <div>
           <h1 className="mt-2 text-2xl tracking-[-0.045em]">Collections</h1>
         </div>

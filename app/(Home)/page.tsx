@@ -187,15 +187,15 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 pt-8 space-y-10">
         
         {/* Top Header & Live Community Status */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#d3c9b5]/60 pb-5">
+        <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-mono-200/60 pb-5">
           <div>
             <div className="flex items-center gap-2.5">
               <h1 className="text-3xl font-serif font-bold tracking-tight text-mono-900">
                 Papyrbound
               </h1>
               {user && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-emerald-100 text-emerald-800 border border-emerald-300">
-                  <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium bg-mono-100 text-mono-800 border border-mono-300">
+                  <span className="size-1.5 rounded-full bg-mono-500 animate-pulse" />
                   Online
                 </span>
               )}
@@ -209,16 +209,16 @@ export default function Home() {
             {user ? (
               <button
                 onClick={() => setAuthModalOpen(true)}
-                className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-mono-200/80 hover:bg-mono-200 border border-[#d3c9b5] text-xs transition-colors cursor-pointer"
+                className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-mono-200/80 hover:bg-mono-200 border border-mono-200 text-xs transition-colors cursor-pointer"
               >
                 {user.avatar_url ? (
                   <img
                     src={user.avatar_url}
                     alt={user.display_name || user.username}
-                    className="size-6 rounded-full object-cover border border-[#d3c9b5]"
+                    className="size-6 rounded-full object-cover border border-mono-200"
                   />
                 ) : (
-                  <div className="size-6 rounded-full bg-amber-700 text-mono-50 grid place-items-center font-bold text-[11px]">
+                  <div className="size-6 rounded-full bg-mono-800 text-mono-50 grid place-items-center font-bold text-[11px]">
                     {(user.display_name || user.username || "U").charAt(0).toUpperCase()}
                   </div>
                 )}
@@ -226,7 +226,7 @@ export default function Home() {
                   <p className="font-semibold text-mono-900 leading-none">
                     {user.display_name || user.username}
                   </p>
-                  <p className="text-[10px] text-emerald-700 flex items-center gap-1 leading-none mt-0.5">
+                  <p className="text-[10px] text-mono-600 flex items-center gap-1 leading-none mt-0.5">
                     <CheckCircle2 className="size-2.5" /> Connected
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function Home() {
             ) : (
               <button
                 onClick={() => setAuthModalOpen(true)}
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium bg-mono-50 border border-[#d3c9b5] text-mono-800 hover:bg-mono-200/60 transition-all shadow-xs cursor-pointer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium bg-mono-50 border border-mono-200 text-mono-800 hover:bg-mono-200/60 transition-all shadow-xs cursor-pointer"
               >
                 <Globe className="size-3.5 text-mono-600" />
                 Sign In / Connect Account
@@ -254,7 +254,7 @@ export default function Home() {
 
         {/* Hero "Continue Reading & Discuss" Widget */}
         {heroBook ? (
-          <section className="relative overflow-hidden rounded-2xl border border-[#d3c9b5] bg-gradient-to-br from-mono-50 via-mono-100 to-[#ebd8b7]/40 p-6 sm:p-8 shadow-sm">
+          <section className="relative overflow-hidden rounded-2xl border border-mono-200 bg-gradient-to-br from-mono-50 via-mono-100 to-mono-100/40 p-6 sm:p-8 shadow-sm">
             <div className="grid md:grid-cols-[160px_1fr] gap-6 items-center">
               <div
                 onClick={() => openBook(heroBook.id)}
@@ -314,9 +314,9 @@ export default function Home() {
 
                   <button
                     onClick={() => setActiveDiscussBook(heroBook.title)}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-mono-50 border border-[#d3c9b5] text-mono-900 hover:bg-mono-200/80 text-xs font-semibold shadow-xs transition-all cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-mono-50 border border-mono-200 text-mono-900 hover:bg-mono-200/80 text-xs font-semibold shadow-xs transition-all cursor-pointer"
                   >
-                    <MessageSquare className="size-4 text-amber-700" />
+                    <MessageSquare className="size-4 text-mono-700" />
                     Discuss this Book
                   </button>
                 </div>
@@ -326,7 +326,7 @@ export default function Home() {
         ) : null}
 
           {/* Community Nav Tabs */}
-        <div className="flex items-center justify-between border-b border-[#d3c9b5]/60 pb-3 gap-3">
+        <div className="flex items-center justify-between border-b border-mono-200/60 pb-3 gap-3">
           <div className="flex items-center gap-2">
             <button
               onClick={() => setActiveTab("all")}
@@ -368,9 +368,9 @@ export default function Home() {
                 setCreateClubModalOpen(true);
               }
             }}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-mono-50 border border-[#d3c9b5] text-mono-900 hover:bg-mono-200/70 transition-all cursor-pointer shadow-xs shrink-0"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-mono-50 border border-mono-200 text-mono-900 hover:bg-mono-200/70 transition-all cursor-pointer shadow-xs shrink-0"
           >
-            <BookmarkPlus className="size-3.5 text-amber-700" />
+            <BookmarkPlus className="size-3.5 text-mono-700" />
             <span>Create Book Club</span>
           </button>
         </div>
@@ -383,7 +383,7 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-xl font-serif font-bold text-mono-900 flex items-center gap-2">
-                  <Flame className="size-4 text-amber-600" />
+                  <Flame className="size-4 text-mono-600" />
                   Live Chapter & Book Discussions
                 </h3>
                 <p className="text-xs text-mono-500">
@@ -395,7 +395,7 @@ export default function Home() {
             {/* Quick Discussion Poster */}
             <form
               onSubmit={handlePostComment}
-              className="rounded-xl border border-[#d3c9b5] bg-mono-50/70 p-4 shadow-xs space-y-3"
+              className="rounded-xl border border-mono-200 bg-mono-50/70 p-4 shadow-xs space-y-3"
             >
               <div className="flex items-center gap-2 text-xs text-mono-600">
                 <span className="font-semibold text-mono-800">
@@ -420,7 +420,7 @@ export default function Home() {
                 onChange={(e) => setNewCommentText(e.target.value)}
                 placeholder="Share your thoughts on this chapter, highlight, or scene..."
                 rows={2}
-                className="w-full text-xs rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-500 transition-colors"
+                className="w-full text-xs rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-500 transition-colors"
               />
 
               <div className="flex items-center justify-between">
@@ -429,10 +429,10 @@ export default function Home() {
                     type="checkbox"
                     checked={isSpoilerChecked}
                     onChange={(e) => setIsSpoilerChecked(e.target.checked)}
-                    className="rounded text-amber-600 cursor-pointer"
+                    className="rounded text-mono-600 cursor-pointer"
                   />
                   <span className="flex items-center gap-1 text-[11px]">
-                    <ShieldAlert className="size-3 text-amber-600" />
+                    <ShieldAlert className="size-3 text-mono-600" />
                     Contains Spoilers
                   </span>
                 </label>
@@ -451,7 +451,7 @@ export default function Home() {
             {/* Discussions List */}
             <div className="space-y-4">
               {discussions.length === 0 ? (
-                <div className="rounded-xl border border-dashed border-[#d3c9b5] bg-mono-50/50 p-8 text-center space-y-2">
+                <div className="rounded-xl border border-dashed border-mono-200 bg-mono-50/50 p-8 text-center space-y-2">
                   <MessageSquare className="size-8 text-mono-400 mx-auto" />
                   <h4 className="text-sm font-serif font-bold text-mono-800">No discussions posted yet</h4>
                   <p className="text-xs text-mono-500 max-w-sm mx-auto">
@@ -467,7 +467,7 @@ export default function Home() {
                       key={disc.id}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="rounded-xl border border-[#d3c9b5] bg-mono-50 p-4.5 shadow-xs space-y-3 transition-all hover:border-mono-400"
+                      className="rounded-xl border border-mono-200 bg-mono-50 p-4.5 shadow-xs space-y-3 transition-all hover:border-mono-400"
                     >
                       {/* Header */}
                       <div className="flex items-start justify-between gap-2">
@@ -476,7 +476,7 @@ export default function Home() {
                             <img
                               src={disc.user.avatar_url}
                               alt={disc.user.display_name}
-                              className="size-7 rounded-full object-cover border border-[#d3c9b5]"
+                              className="size-7 rounded-full object-cover border border-mono-200"
                             />
                           ) : (
                             <div className="size-7 rounded-full bg-mono-800 text-mono-50 grid place-items-center font-bold text-xs">
@@ -496,7 +496,7 @@ export default function Home() {
                               </span>
                             </div>
                             <div className="flex items-center gap-1.5 mt-0.5">
-                              <span className="text-[10px] font-semibold text-amber-900 bg-amber-100/80 px-1.5 py-0.2 rounded">
+                              <span className="text-[10px] font-semibold text-mono-900 bg-mono-100/80 px-1.5 py-0.2 rounded">
                                 {disc.book_title}
                               </span>
                               <span className="text-[10px] font-mono text-mono-500">
@@ -509,9 +509,9 @@ export default function Home() {
 
                       {/* Content & Spoiler Shield */}
                       {disc.is_spoiler && !isRevealed ? (
-                        <div className="rounded-lg border border-amber-300 bg-amber-50/80 p-3 flex items-center justify-between gap-3">
-                          <div className="flex items-center gap-2 text-xs text-amber-900">
-                            <ShieldAlert className="size-4 text-amber-600 shrink-0" />
+                        <div className="rounded-lg border border-mono-300 bg-mono-50/80 p-3 flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-2 text-xs text-mono-900">
+                            <ShieldAlert className="size-4 text-mono-600 shrink-0" />
                             <span>
                               <strong>Spoiler Protection:</strong>{" "}
                               {disc.spoiler_warning || "Contains content from a later chapter"}
@@ -519,7 +519,7 @@ export default function Home() {
                           </div>
                           <button
                             onClick={() => toggleSpoiler(disc.id)}
-                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-amber-200 text-amber-950 hover:bg-amber-300 text-[11px] font-semibold transition-colors cursor-pointer shrink-0"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-mono-200 text-mono-950 hover:bg-mono-300 text-[11px] font-semibold transition-colors cursor-pointer shrink-0"
                           >
                             <Eye className="size-3" />
                             Reveal
@@ -542,12 +542,12 @@ export default function Home() {
                       )}
 
                       {/* Footer Actions */}
-                      <div className="flex items-center justify-between border-t border-[#d3c9b5]/40 pt-2 text-xs text-mono-500">
+                      <div className="flex items-center justify-between border-t border-mono-200/40 pt-2 text-xs text-mono-500">
                         <div className="flex items-center gap-4">
                           <button
                             onClick={() => toggleLike(disc.id)}
                             className={`flex items-center gap-1 text-xs transition-colors cursor-pointer ${
-                              disc.is_liked ? "text-rose-600 font-semibold" : "hover:text-mono-800"
+                              disc.is_liked ? "text-mono-900 font-semibold" : "hover:text-mono-800"
                             }`}
                           >
                             <Heart
@@ -568,7 +568,7 @@ export default function Home() {
 
                         <button
                           onClick={() => setActiveDiscussBook(disc.book_title)}
-                          className="text-[11px] font-medium text-mono-700 hover:text-amber-800 cursor-pointer"
+                          className="text-[11px] font-medium text-mono-700 hover:text-mono-950 cursor-pointer"
                         >
                           Join Thread →
                         </button>
@@ -587,7 +587,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-serif font-bold text-mono-900 flex items-center gap-2">
-                  <Users className="size-4 text-emerald-700" />
+                  <Users className="size-4 text-mono-700" />
                   Community Book Clubs
                 </h3>
                 <span className="text-xs text-mono-500 font-mono">
@@ -597,7 +597,7 @@ export default function Home() {
 
               <div className="space-y-3">
                 {liveClubs.length === 0 ? (
-                  <div className="rounded-xl border border-dashed border-[#d3c9b5] bg-mono-50/50 p-6 text-center space-y-2">
+                  <div className="rounded-xl border border-dashed border-mono-200 bg-mono-50/50 p-6 text-center space-y-2">
                     <Users className="size-6 text-mono-400 mx-auto" />
                     <h4 className="text-xs font-serif font-bold text-mono-800">No book clubs yet</h4>
                     <p className="text-[11px] text-mono-500 max-w-xs mx-auto">
@@ -619,11 +619,11 @@ export default function Home() {
                     <div
                       key={club.id}
                       onClick={() => setActiveClubRoom(club)}
-                      className="rounded-xl border border-[#d3c9b5] bg-mono-50 p-4 shadow-xs space-y-2.5 transition-all hover:border-mono-400 cursor-pointer group"
+                      className="rounded-xl border border-mono-200 bg-mono-50 p-4 shadow-xs space-y-2.5 transition-all hover:border-mono-400 cursor-pointer group"
                     >
                       <div className="flex items-start justify-between gap-2">
                         <div>
-                          <h4 className="text-sm font-serif font-bold text-mono-900 group-hover:text-amber-800 transition-colors">
+                          <h4 className="text-sm font-serif font-bold text-mono-900 group-hover:text-mono-950 transition-colors">
                             {club.name}
                           </h4>
                           <span className="text-[10px] text-mono-500 font-mono uppercase tracking-wider">
@@ -635,7 +635,7 @@ export default function Home() {
                           onClick={(e) => handleToggleJoinClub(e, club)}
                           className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                             club.is_joined
-                              ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                              ? "bg-mono-100 text-mono-800 border border-mono-300"
                               : "bg-mono-800 text-mono-50 hover:bg-mono-700"
                           }`}
                         >
@@ -649,10 +649,10 @@ export default function Home() {
                         </p>
                       )}
 
-                      <div className="pt-2 border-t border-[#d3c9b5]/40 flex flex-col gap-1 text-[11px] text-mono-700 font-mono">
+                      <div className="pt-2 border-t border-mono-200/40 flex flex-col gap-1 text-[11px] text-mono-700 font-mono">
                         {club.current_book_title && (
                           <div className="flex items-center gap-1.5 text-mono-800 truncate">
-                            <BookOpen className="size-3 text-amber-700 shrink-0" />
+                            <BookOpen className="size-3 text-mono-700 shrink-0" />
                             <span className="truncate">Currently reading: <strong>{club.current_book_title}</strong></span>
                           </div>
                         )}
@@ -670,21 +670,21 @@ export default function Home() {
             </div>
 
             {/* Quick Recent Library Grid */}
-            <div className="space-y-4 pt-4 border-t border-[#d3c9b5]/60">
+            <div className="space-y-4 pt-4 border-t border-mono-200/60">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-serif font-bold text-mono-900">
                   Your Library Reads
                 </h3>
                 <Link
                   href="/library"
-                  className="text-xs text-amber-800 hover:underline font-medium"
+                  className="text-xs text-mono-800 hover:text-mono-950 hover:underline font-medium"
                 >
                   View all ({books.length})
                 </Link>
               </div>
 
               {books.length === 0 ? (
-                <div className="text-center py-8 border border-dashed border-[#d3c9b5] rounded-xl p-4 bg-mono-50/50">
+                <div className="text-center py-8 border border-dashed border-mono-200 rounded-xl p-4 bg-mono-50/50">
                   <BookOpen className="size-6 text-mono-400 mx-auto mb-2" />
                   <p className="text-xs text-mono-500">No books imported yet.</p>
                 </div>
@@ -716,12 +716,12 @@ export default function Home() {
         </div>
 
         {/* Footer Navigation */}
-        <div className="pt-6 border-t border-[#d3c9b5]/40 flex items-center justify-between">
+        <div className="pt-6 border-t border-mono-200/40 flex items-center justify-between">
           <Link
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             href="/library"
-            className="flex w-fit items-center gap-2 text-xl font-serif text-mono-900 hover:text-amber-800 transition-colors"
+            className="flex w-fit items-center gap-2 text-xl font-serif text-mono-900 hover:text-mono-950 transition-colors"
           >
             <span className="relative inline-block">
               Open Full Library

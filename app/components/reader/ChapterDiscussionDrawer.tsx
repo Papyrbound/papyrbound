@@ -143,12 +143,12 @@ export default function ChapterDiscussionDrawer({
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ type: "spring", damping: 26, stiffness: 280 }}
-          className="relative z-10 w-full max-w-md h-full flex flex-col border-l border-[#d3c9b5] bg-mono-100 shadow-2xl text-mono-800"
+          className="relative z-10 w-full max-w-md h-full flex flex-col border-l border-mono-200 bg-mono-100 shadow-2xl text-mono-800"
         >
           {/* Header */}
-          <header className="p-5 border-b border-[#d3c9b5] bg-mono-50 flex items-center justify-between">
+          <header className="p-5 border-b border-mono-200 bg-mono-50 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="size-9 rounded-xl bg-amber-700 text-mono-50 grid place-items-center font-bold text-sm shadow-xs">
+              <div className="size-9 rounded-xl bg-mono-700 text-mono-50 grid place-items-center font-bold text-sm shadow-xs">
                 <MessageSquare className="size-4.5" />
               </div>
               <div>
@@ -170,10 +170,10 @@ export default function ChapterDiscussionDrawer({
           </header>
 
           {/* Scope Filter Tabs & Reading Context */}
-          <div className="px-5 py-3 border-b border-[#d3c9b5]/70 bg-mono-50/70 space-y-2">
+          <div className="px-5 py-3 border-b border-mono-200/70 bg-mono-50/70 space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-medium text-mono-700 flex items-center gap-1.5 font-mono">
-                <BookOpen className="size-3.5 text-amber-700" />
+                <BookOpen className="size-3.5 text-mono-700" />
                 <span>Reading: Chapter {currentChapterIndex + 1}</span>
               </span>
 
@@ -209,8 +209,8 @@ export default function ChapterDiscussionDrawer({
                 Loading chapter commentary...
               </div>
             ) : discussions.length === 0 ? (
-              <div className="text-center py-12 border border-dashed border-[#d3c9b5] rounded-xl bg-mono-50/50 p-4 space-y-2">
-                <Flame className="size-7 text-amber-600/70 mx-auto" />
+              <div className="text-center py-12 border border-dashed border-mono-200 rounded-xl bg-mono-50/50 p-4 space-y-2">
+                <Flame className="size-7 text-mono-600/70 mx-auto" />
                 <p className="text-xs font-semibold text-mono-800">
                   No comments on this chapter yet
                 </p>
@@ -226,7 +226,7 @@ export default function ChapterDiscussionDrawer({
                 return (
                   <article
                     key={item.id}
-                    className="rounded-xl border border-[#d3c9b5] bg-mono-50 p-4 shadow-xs space-y-2.5 transition-all"
+                    className="rounded-xl border border-mono-200 bg-mono-50 p-4 shadow-xs space-y-2.5 transition-all"
                   >
                     {/* Author & Chapter tag */}
                     <div className="flex items-center justify-between gap-2">
@@ -251,9 +251,9 @@ export default function ChapterDiscussionDrawer({
 
                     {/* Content / Spoiler Shield */}
                     {isSpoilerProtected ? (
-                      <div className="rounded-lg border border-amber-300 bg-amber-50/90 p-3 space-y-2">
-                        <div className="flex items-center gap-1.5 text-xs text-amber-900 font-semibold">
-                          <ShieldAlert className="size-4 text-amber-600 shrink-0" />
+                      <div className="rounded-lg border border-mono-300 bg-mono-50/90 p-3 space-y-2">
+                        <div className="flex items-center gap-1.5 text-xs text-mono-900 font-semibold">
+                          <ShieldAlert className="size-4 text-mono-600 shrink-0" />
                           <span>
                             {isBeyondCurrentChapter
                               ? `Mentions Chapter ${item.chapter_index + 1} (Ahead of your reading)`
@@ -262,7 +262,7 @@ export default function ChapterDiscussionDrawer({
                         </div>
                         <button
                           onClick={() => toggleReveal(item.id)}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-amber-200 text-amber-950 hover:bg-amber-300 text-[11px] font-semibold transition-colors cursor-pointer"
+                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-mono-200 text-mono-950 hover:bg-mono-300 text-[11px] font-semibold transition-colors cursor-pointer"
                         >
                           <Eye className="size-3" />
                           Reveal Comment
@@ -285,11 +285,11 @@ export default function ChapterDiscussionDrawer({
                     )}
 
                     {/* Actions */}
-                    <div className="flex items-center justify-between border-t border-[#d3c9b5]/40 pt-2 text-[11px] text-mono-500">
+                    <div className="flex items-center justify-between border-t border-mono-200/40 pt-2 text-[11px] text-mono-500">
                       <button
                         onClick={() => handleToggleLike(item.id)}
                         className={`flex items-center gap-1 transition-colors cursor-pointer ${
-                          item.is_liked ? "text-rose-600 font-semibold" : "hover:text-mono-800"
+                          item.is_liked ? "text-mono-600 font-semibold" : "hover:text-mono-800"
                         }`}
                       >
                         <Heart
@@ -313,7 +313,7 @@ export default function ChapterDiscussionDrawer({
           </div>
 
           {/* Fast Composer Footer */}
-          <footer className="p-4 bg-mono-50 border-t border-[#d3c9b5]">
+          <footer className="p-4 bg-mono-50 border-t border-mono-200">
             {user ? (
               <form onSubmit={handlePost} className="space-y-2.5">
                 <textarea
@@ -321,7 +321,7 @@ export default function ChapterDiscussionDrawer({
                   value={newComment}
                   onChange={(e) => setNewComment(e.target.value)}
                   placeholder={`Discuss Chapter ${currentChapterIndex + 1}...`}
-                  className="w-full text-xs rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600 transition-colors"
+                  className="w-full text-xs rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600 transition-colors"
                 />
 
                 <div className="flex items-center justify-between">
@@ -330,10 +330,10 @@ export default function ChapterDiscussionDrawer({
                       type="checkbox"
                       checked={isSpoilerChecked}
                       onChange={(e) => setIsSpoilerChecked(e.target.checked)}
-                      className="rounded text-amber-600"
+                      className="rounded text-mono-600"
                     />
                     <span className="text-[11px] flex items-center gap-1">
-                      <ShieldAlert className="size-3 text-amber-600" />
+                      <ShieldAlert className="size-3 text-mono-600" />
                       Contains Spoilers
                     </span>
                   </label>
@@ -349,14 +349,14 @@ export default function ChapterDiscussionDrawer({
                 </div>
               </form>
             ) : (
-              <div className="flex items-center justify-between p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-xs">
-                <div className="flex items-center gap-2 text-amber-900">
-                  <LogIn className="size-4 text-amber-700 shrink-0" />
+              <div className="flex items-center justify-between p-2.5 rounded-xl bg-mono-50 border border-mono-200 text-xs">
+                <div className="flex items-center gap-2 text-mono-900">
+                  <LogIn className="size-4 text-mono-700 shrink-0" />
                   <span>Sign in to join chapter discussions.</span>
                 </div>
                 <button
                   onClick={() => setAuthModalOpen(true)}
-                  className="px-3 py-1 rounded-lg bg-amber-800 text-mono-50 font-medium hover:bg-amber-700 cursor-pointer shrink-0"
+                  className="px-3 py-1 rounded-lg bg-mono-800 text-mono-50 font-medium hover:bg-mono-700 cursor-pointer shrink-0"
                 >
                   Sign In
                 </button>

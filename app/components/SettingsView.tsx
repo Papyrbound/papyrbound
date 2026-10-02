@@ -55,7 +55,7 @@ export default function SettingsView({
             </div>
 
             <div className="p-4 rounded-xl bg-secondary/40 border border-border/60 text-center space-y-1">
-              <span className="text-2xl font-extrabold font-mono text-amber-500">{highlightsCount}</span>
+              <span className="text-2xl font-extrabold font-mono text-mono-500">{highlightsCount}</span>
               <span className="block text-xs font-medium text-muted-foreground">Saved Highlights</span>
             </div>
 

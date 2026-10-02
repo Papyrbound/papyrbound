@@ -76,7 +76,7 @@ export default function Sidebar() {
         >
           <Asterisk
             aria-hidden="true"
-            className={`size-6 ${isImporting ? "animate-spin text-amber-600" : ""}`}
+            className={`size-6 ${isImporting ? "animate-spin text-mono-600" : ""}`}
             strokeWidth={1.5}
           />
         </motion.button>
@@ -238,7 +238,7 @@ export default function Sidebar() {
                 className="size-8 rounded-full object-cover border border-sidebar-border"
               />
             ) : (
-              <div className="size-8 rounded-full bg-amber-700 text-mono-50 grid place-items-center font-bold text-xs">
+              <div className="size-8 rounded-full bg-mono-700 text-mono-50 grid place-items-center font-bold text-xs">
                 {(user.display_name || user.username || "U").charAt(0).toUpperCase()}
               </div>
             )}
@@ -250,7 +250,7 @@ export default function Sidebar() {
                 @{user.username}
               </p>
             </div>
-            <span className="size-2 rounded-full bg-emerald-500 shrink-0" title="Online" />
+            <span className="size-2 rounded-full bg-mono-500 shrink-0" title="Online" />
           </button>
         ) : (
           <button

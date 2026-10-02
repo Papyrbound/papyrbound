@@ -26,13 +26,13 @@ export default function LibraryPage() {
 
   return (
     <main
-      className="min-h-dvh overflow-hidden text-[#24231f]"
+      className="min-h-dvh overflow-hidden text-mono-800"
       aria-label="Library"
     >
       <div className="grid min-h-dvh grid-cols-[minmax(0,1fr)_minmax(320px,0.36fr)]">
         <section className="min-w-0 px-7 pb-12 pt-16 xl:px-8">
           <div className="h-4" />
-          <div className="mb-5 flex items-end justify-between border-b border-[#d3c9b5] pb-3">
+          <div className="mb-5 flex items-end justify-between border-b border-mono-200 pb-3">
             <span className="flex items-center gap-2 text-2xl tracking-[-0.045em] font-serif">
               <h1 className="font-bold">All books</h1>
               <span className="text-base font-mono text-sidebar-muted">({books.length})</span>
@@ -119,7 +119,7 @@ export default function LibraryPage() {
                         title={bookFavorited ? "Remove from favourites" : "Add to favourites"}
                         className={`absolute top-2 right-2 p-1.5 rounded-full transition-all cursor-pointer ${
                           bookFavorited
-                            ? "bg-rose-50 text-rose-600 shadow-md opacity-100"
+                            ? "bg-mono-50 text-mono-600 shadow-md opacity-100"
                             : "bg-mono-900/60 text-mono-50 hover:bg-mono-900 opacity-0 group-hover:opacity-100"
                         }`}
                       >
@@ -143,7 +143,7 @@ export default function LibraryPage() {
                             New
                           </span>
                         ) : progress >= 99 ? (
-                          <span className="text-emerald-700 font-medium">Finished</span>
+                          <span className="text-mono-700 font-medium">Finished</span>
                         ) : (
                           <span className="font-mono">{progress}%</span>
                         )}
@@ -166,7 +166,7 @@ export default function LibraryPage() {
                             icon: (
                               <Heart
                                 aria-hidden="true"
-                                className={`size-4 ${bookFavorited ? "text-rose-600" : "text-sidebar-muted"}`}
+                                className={`size-4 ${bookFavorited ? "text-mono-600" : "text-sidebar-muted"}`}
                                 fill={bookFavorited ? "currentColor" : "none"}
                                 strokeWidth={1.5}
                               />
@@ -228,7 +228,7 @@ export default function LibraryPage() {
                   title={isFavorite(selectedDetails.id) ? "Remove from favourites" : "Add to favourites"}
                   className={`p-2.5 rounded-xl border transition-colors cursor-pointer flex items-center justify-center ${
                     isFavorite(selectedDetails.id)
-                      ? "border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100"
+                      ? "border-mono-200 bg-mono-50 text-mono-600 hover:bg-mono-100"
                       : "border-sidebar-border bg-sidebar-accent/50 text-sidebar-muted hover:text-mono-800 hover:bg-sidebar-accent"
                   }`}
                 >

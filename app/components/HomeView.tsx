@@ -98,7 +98,7 @@ export default function HomeView({
                       {heroBook.author || "Unknown"}
                     </span>
                     {heroBook.progress_percent > 0 && (
-                      <span className="text-[10px] font-mono mt-1 text-amber-300">
+                      <span className="text-[10px] font-mono mt-1 text-mono-300">
                         {heroBook.progress_percent}% completed
                       </span>
                     )}

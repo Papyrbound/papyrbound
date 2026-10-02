@@ -114,7 +114,7 @@ export default function AuthModal() {
           initial={{ opacity: 0, scale: 0.95, y: 14 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 14 }}
-          className="relative w-full max-w-md overflow-hidden rounded-2xl border border-[#d3c9b5] bg-mono-50 p-6 sm:p-8 shadow-2xl z-10 text-mono-800"
+          className="relative w-full max-w-md overflow-hidden rounded-2xl border border-mono-200 bg-mono-50 p-6 sm:p-8 shadow-2xl z-10 text-mono-800"
         >
           {/* Close Button */}
           <button
@@ -127,7 +127,7 @@ export default function AuthModal() {
           {user ? (
             /* Logged In Profile View */
             <div className="space-y-6 text-center">
-              <div className="size-16 rounded-full bg-amber-700 text-mono-50 mx-auto grid place-items-center text-2xl font-serif font-bold shadow-md">
+              <div className="size-16 rounded-full bg-mono-700 text-mono-50 mx-auto grid place-items-center text-2xl font-serif font-bold shadow-md">
                 {user.display_name?.charAt(0).toUpperCase() || user.username?.charAt(0).toUpperCase()}
               </div>
 
@@ -138,22 +138,22 @@ export default function AuthModal() {
                 <p className="text-xs text-mono-500 font-mono mt-0.5">
                   @{user.username} • {user.email}
                 </p>
-                <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-mono-100 text-mono-800 border border-mono-300">
                   <CheckCircle2 className="size-3" />
                   Papyrbound Account Active
                 </div>
               </div>
 
-              <div className="rounded-xl border border-[#d3c9b5] bg-mono-100/60 p-4 text-left space-y-2 text-xs">
-                <div className="flex justify-between py-1 border-b border-[#d3c9b5]/40">
+              <div className="rounded-xl border border-mono-200 bg-mono-100/60 p-4 text-left space-y-2 text-xs">
+                <div className="flex justify-between py-1 border-b border-mono-200/40">
                   <span className="text-mono-500">Connected Providers:</span>
                   <span className="font-semibold text-mono-800">
                     {user.connected_providers?.join(", ") || "Email"}
                   </span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#d3c9b5]/40">
+                <div className="flex justify-between py-1 border-b border-mono-200/40">
                   <span className="text-mono-500">Cloud Sync:</span>
-                  <span className="text-emerald-700 font-medium flex items-center gap-1">
+                  <span className="text-mono-700 font-medium flex items-center gap-1">
                     <ShieldCheck className="size-3" /> Ready
                   </span>
                 </div>
@@ -199,7 +199,7 @@ export default function AuthModal() {
                 type="button"
                 onClick={handleGoogleOAuth}
                 disabled={isLoading}
-                className="w-full flex items-center justify-center gap-3 py-2.5 px-4 rounded-xl border border-[#d3c9b5] bg-white hover:bg-mono-100 text-mono-900 text-xs font-semibold shadow-xs transition-all cursor-pointer disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-3 py-2.5 px-4 rounded-xl border border-mono-200 bg-white hover:bg-mono-100 text-mono-900 text-xs font-semibold shadow-xs transition-all cursor-pointer disabled:opacity-50"
               >
                 <svg className="size-4" viewBox="0 0 24 24">
                   <path
@@ -224,7 +224,7 @@ export default function AuthModal() {
 
               <div className="relative text-center">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-[#d3c9b5]" />
+                  <div className="w-full border-t border-mono-200" />
                 </div>
                 <span className="relative bg-mono-50 px-2 text-[10px] text-mono-400 font-mono uppercase">
                   or with email
@@ -247,7 +247,7 @@ export default function AuthModal() {
                           value={displayName}
                           onChange={(e) => setDisplayName(e.target.value)}
                           placeholder="e.g. Bill"
-                          className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-[#d3c9b5] bg-mono-100 outline-none focus:border-mono-600 transition-colors"
+                          className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-mono-200 bg-mono-100 outline-none focus:border-mono-600 transition-colors"
                         />
                       </div>
                     </div>
@@ -266,7 +266,7 @@ export default function AuthModal() {
                           value={username}
                           onChange={(e) => setUsername(e.target.value)}
                           placeholder="bill10k"
-                          className="w-full pl-8 pr-3 py-2 text-xs rounded-xl border border-[#d3c9b5] bg-mono-100 outline-none focus:border-mono-600 transition-colors font-mono"
+                          className="w-full pl-8 pr-3 py-2 text-xs rounded-xl border border-mono-200 bg-mono-100 outline-none focus:border-mono-600 transition-colors font-mono"
                         />
                       </div>
                     </div>
@@ -285,7 +285,7 @@ export default function AuthModal() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder={mode === "login" ? "bill@example.com or bill10k" : "bill@example.com"}
-                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-[#d3c9b5] bg-mono-100 outline-none focus:border-mono-600 transition-colors"
+                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-mono-200 bg-mono-100 outline-none focus:border-mono-600 transition-colors"
                     />
                   </div>
                 </div>
@@ -302,7 +302,7 @@ export default function AuthModal() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
-                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-[#d3c9b5] bg-mono-100 outline-none focus:border-mono-600 transition-colors font-mono"
+                      className="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-mono-200 bg-mono-100 outline-none focus:border-mono-600 transition-colors font-mono"
                     />
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export default function AuthModal() {
                         setMode("register");
                         setError(null);
                       }}
-                      className="font-semibold text-mono-900 underline hover:text-amber-800 cursor-pointer"
+                      className="font-semibold text-mono-900 underline hover:text-mono-800 cursor-pointer"
                     >
                       Create one
                     </button>
@@ -342,7 +342,7 @@ export default function AuthModal() {
                         setMode("login");
                         setError(null);
                       }}
-                      className="font-semibold text-mono-900 underline hover:text-amber-800 cursor-pointer"
+                      className="font-semibold text-mono-900 underline hover:text-mono-800 cursor-pointer"
                     >
                       Sign In
                     </button>

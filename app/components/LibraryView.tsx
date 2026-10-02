@@ -212,7 +212,7 @@ export default function LibraryView({
                       {b.progress_percent > 0 && (
                         <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-xs h-1">
                           <div
-                            className="bg-amber-400 h-full"
+                            className="bg-mono-400 h-full"
                             style={{ width: `${b.progress_percent}%` }}
                           />
                         </div>

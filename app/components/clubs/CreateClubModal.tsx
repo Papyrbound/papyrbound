@@ -93,7 +93,7 @@ export default function CreateClubModal({
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
-          className="relative z-10 w-full max-w-lg rounded-2xl border border-[#d3c9b5] bg-mono-50 p-6 shadow-2xl space-y-5"
+          className="relative z-10 w-full max-w-lg rounded-2xl border border-mono-200 bg-mono-50 p-6 shadow-2xl space-y-5"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
@@ -119,7 +119,7 @@ export default function CreateClubModal({
           </div>
 
           {error && (
-            <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-800">
+            <div className="p-3 rounded-lg bg-mono-50 border border-mono-200 text-xs text-mono-800">
               {error}
             </div>
           )}
@@ -135,7 +135,7 @@ export default function CreateClubModal({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. Brandon Sanderson Society"
-                className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
               />
             </div>
 
@@ -147,7 +147,7 @@ export default function CreateClubModal({
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                  className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
                 >
                   {CATEGORIES.map((c) => (
                     <option key={c} value={c}>
@@ -166,7 +166,7 @@ export default function CreateClubModal({
                   value={meetingSchedule}
                   onChange={(e) => setMeetingSchedule(e.target.value)}
                   placeholder="e.g. Sundays 7:00 PM GMT"
-                  className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                  className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
                 />
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function CreateClubModal({
                   value={currentBookTitle}
                   onChange={(e) => setCurrentBookTitle(e.target.value)}
                   placeholder="e.g. The Way of Kings"
-                  className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                  className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
                 />
               </div>
 
@@ -194,7 +194,7 @@ export default function CreateClubModal({
                   value={currentBookAuthor}
                   onChange={(e) => setCurrentBookAuthor(e.target.value)}
                   placeholder="e.g. Brandon Sanderson"
-                  className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                  className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
                 />
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function CreateClubModal({
                 value={currentChapterTarget}
                 onChange={(e) => setCurrentChapterTarget(e.target.value)}
                 placeholder="e.g. Chapters 1 to 10 for Week 1"
-                className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
               />
             </div>
 
@@ -221,7 +221,7 @@ export default function CreateClubModal({
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="What is this club about? Who should join?"
-                className="w-full rounded-lg border border-[#d3c9b5] bg-mono-100 p-2.5 outline-none focus:border-mono-600"
+                className="w-full rounded-lg border border-mono-200 bg-mono-100 p-2.5 outline-none focus:border-mono-600"
               />
             </div>
 
