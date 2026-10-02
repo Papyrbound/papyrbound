@@ -75,7 +75,7 @@ export default function InsightsView({ onOpenBook }: InsightsViewProps) {
     : 1;
 
   return (
-    <div className="flex-1 overflow-y-auto px-6 lg:px-10 py-8 bg-mono-50 dark:bg-[#121212] text-mono-900 dark:text-mono-100 min-h-full">
+    <div className="flex-1 overflow-y-auto px-6 lg:px-10 py-8 bg-mono-50 dark:bg-mono-950 text-mono-900 dark:text-mono-100 min-h-full">
       <div className="max-w-6xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-mono-200/80 dark:border-mono-800 pb-6">

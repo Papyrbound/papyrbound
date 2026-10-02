@@ -351,7 +351,7 @@ export default function CollectionsPage() {
             ariaLabel={`${selectedCollectionDetails.name} details`}
             variant="overlay"
             reduceMotion={reduceMotion}
-            className="shadow-[0_18px_44px_rgba(42,37,26,0.16)]"
+            className="shadow-md"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -444,7 +444,7 @@ export default function CollectionsPage() {
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={reduceMotion ? { opacity: 0 } : { y: 10, opacity: 0, scale: 0.96 }}
               transition={{ duration: reduceMotion ? 0 : 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed left-1/2 top-1/2 z-50 w-[min(420px,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-sidebar-border bg-background p-6 text-mono-800 shadow-[0_18px_44px_rgba(42,37,26,0.16)]"
+              className="fixed left-1/2 top-1/2 z-50 w-[min(420px,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-border bg-popover p-6 text-mono-800 shadow-md"
             >
               <div className="mb-6 flex items-center justify-between">
                 <div>

@@ -97,7 +97,7 @@ export default function ContextMenu({
             exit={reduceMotion ? { opacity: 0 } : { y: placement === "above" ? -8 : 8, opacity: 0, scale: 0.96 }}
             transition={{ duration: reduceMotion ? 0 : 0.18, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: placement === "above" ? "center bottom" : "center top" }}
-            className={`absolute z-20 w-42 rounded-xl border border-sidebar-border bg-background p-1 text-sm text-sidebar-foreground shadow-[0_18px_44px_rgba(42,37,26,0.16)] ${
+            className={`absolute z-20 w-42 rounded-xl border border-border bg-popover p-1 text-sm text-popover-foreground shadow-md ${
               placement === "above" ? "bottom-full mb-2" : "top-full mt-1"
             } ${alignmentClassName}`}
           >

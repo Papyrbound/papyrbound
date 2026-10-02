@@ -17,29 +17,30 @@
   --mono-900: #171717;
   --mono-950: #0a0a0a;
 
-  --background: var(--mono-50);
-  --foreground: var(--mono-800);
+  /* Canvas, rails, and elevated surfaces follow the sidebar/menu hierarchy. */
+  --background: var(--mono-100);
+  --foreground: var(--mono-900);
   --card: var(--mono-0);
   --card-foreground: var(--mono-800);
   --popover: var(--mono-0);
   --popover-foreground: var(--mono-800);
-  --primary: var(--mono-800);
-  --primary-foreground: var(--mono-50);
+  --primary: var(--mono-900);
+  --primary-foreground: var(--mono-0);
   --secondary: var(--mono-100);
   --secondary-foreground: var(--mono-900);
   --muted: var(--mono-100);
   --muted-foreground: var(--mono-600);
   --accent: var(--mono-200);
-  --accent-foreground: var(--mono-800);
-  --destructive: var(--mono-800);
+  --accent-foreground: var(--mono-900);
+  --destructive: var(--mono-700);
   --destructive-foreground: var(--mono-0);
   --border: var(--mono-200);
   --input: var(--mono-300);
-  --ring: var(--mono-500);
+  --ring: var(--mono-800);
 
   /* Osmo-inspired light rail: paper over a soft gray canvas. */
-  --sidebar: var(--mono-50);
-  --sidebar-foreground: var(--mono-800);
+  --sidebar: var(--mono-0);
+  --sidebar-foreground: var(--mono-900);
   --sidebar-muted: var(--mono-600);
   --sidebar-accent: var(--mono-100);
   --sidebar-border: var(--mono-200);
@@ -118,19 +119,23 @@
   --radius-4xl: 16px;
   --radius-full: 9999px;
 
-  /* Penpot Spacing/space tokens. Use utilities such as p-md, gap-lg, and mt-2xl. */
-  --spacing-none: 0px;
-  --spacing-2xs: 4px;
-  --spacing-xs: 8px;
-  --spacing-sm: 12px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 40px;
-  --spacing-3xl: 48px;
-  --spacing-4xl: 64px;
-  --spacing-5xl: 80px;
-  --spacing-6xl: 96px;
+  /*
+   * Penpot Spacing/space tokens. The `space-` prefix avoids replacing Tailwind
+   * container aliases such as max-w-md and max-w-xl. Use p-space-md, gap-space-lg,
+   * or mt-space-2xl when a named token is needed.
+   */
+  --spacing-space-none: 0px;
+  --spacing-space-2xs: 4px;
+  --spacing-space-xs: 8px;
+  --spacing-space-sm: 12px;
+  --spacing-space-md: 16px;
+  --spacing-space-lg: 24px;
+  --spacing-space-xl: 32px;
+  --spacing-space-2xl: 40px;
+  --spacing-space-3xl: 48px;
+  --spacing-space-4xl: 64px;
+  --spacing-space-5xl: 80px;
+  --spacing-space-6xl: 96px;
   --shadow-xs: var(--elevation-xs);
   --shadow-sm: var(--elevation-sm);
   --shadow-md: var(--elevation-md);
