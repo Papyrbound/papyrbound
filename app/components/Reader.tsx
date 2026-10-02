@@ -586,9 +586,9 @@ export default function Reader({ book, initialChapterIndex, onClose }: ReaderPro
   };
 
   const fontFamilyClasses: Record<FontFamily, string> = {
-    serif: "font-serif",
+    serif: "reader-typeface-serif",
     sans: "font-sans",
-    mono: "font-mono",
+    mono: "reader-typeface-mono",
   };
 
   const lineHeightClasses: Record<LineHeight, string> = {
